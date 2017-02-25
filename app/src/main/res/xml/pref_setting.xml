@@ -1,0 +1,59 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/setting">
+
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="open"
+            android:title="@string/pref_open" />
+
+        <SwitchPreference
+            android:defaultValue="true"
+            android:dependency="open"
+            android:key="password"
+            android:title="@string/pref_password" />
+
+        <SwitchPreference
+            android:defaultValue="false"
+            android:dependency="open"
+            android:key="not_self"
+            android:title="@string/pre_not_self" />
+
+        <SwitchPreference
+            android:defaultValue="false"
+            android:dependency="open"
+            android:key="not_whisper"
+            android:title="@string/pref_whisper" />
+
+        <SwitchPreference
+            android:defaultValue="false"
+            android:dependency="open"
+            android:key="not_mute"
+            android:title="@string/pref_not_mute" />
+
+        <EditTextPreference
+            android:dependency="open"
+            android:key="max_delay_time"
+            android:title="@string/pref_delay_time" />
+
+        <EditTextPreference
+            android:dependency="open"
+            android:key="keywords"
+            android:title="@string/pref_keywords" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:enabled="true"
+        android:title="@string/pref_others">
+        <Preference
+            android:key="wake_up"
+            android:title="@string/wake_up" />
+        <Preference
+            android:key="donate_alipay"
+            android:title="@string/alipay_donate" />
+        <Preference
+            android:key="donate_wechat"
+            android:title="@string/wechat_donate" />
+    </PreferenceCategory>
+
+</PreferenceScreen>
